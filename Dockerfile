@@ -1,4 +1,4 @@
-FROM caddy:2.5.1-builder-alpine AS caddybuilder
+FROM caddy:2.5.2-builder-alpine AS caddybuilder
 
 RUN xcaddy build \
     --with github.com/abiosoft/caddy-exec \
@@ -8,7 +8,7 @@ RUN xcaddy build \
     --with github.com/mholt/caddy-webdav
 
 # build nonedotone caddy
-FROM caddy:2.5.1-alpine
+FROM caddy:2.5.2-alpine
 
 LABEL name="none" email="none@none.one"
 
